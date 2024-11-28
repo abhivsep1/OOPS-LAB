@@ -1,0 +1,73 @@
+#q1] Write a program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age. 
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+print(f"Person 1: Name = {person1.name}, Age = {person1.age}")
+print(f"Person 2: Name = {person2.name}, Age = {person2.age}")
+
+#q2] Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. Assign the value of roll no as '2' and that of name as "John" by creating an object of the class Student. 
+class Student:
+    def __init__(self, name, roll_no):
+        self.name = name
+        self.roll_no = roll_no
+
+student1 = Student("John", 2)
+
+print(f"Student Name: {student1.name}")
+print(f"Roll Number: {student1.roll_no}")
+
+#q3] Write a program to define a class to represent a bank account, with methods to deposit, withdraw, and check the balance.
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited: {amount}. Current balance: {self.balance}")
+        else:
+            print("Deposit amount must be greater than zero.")
+
+    def withdraw(self, amount):
+        if amount > 0:
+            if amount <= self.balance:
+                self.balance -= amount
+                print(f"Withdrew: {amount}. Current balance: {self.balance}")
+            else:
+                print("Insufficient funds!")
+        else:
+            print("Withdrawal amount must be greater than zero.")
+
+    def check_balance(self):
+        print(f"Current balance: {self.balance}")
+
+account = BankAccount(1000) 
+account.check_balance()  # Check the initial balance
+
+account.deposit(500)  # Deposit $500
+account.withdraw(200)  # Withdraw $200
+account.check_balance()  # Check the balance after transactions
+account.withdraw(1500)  # Try to withdraw more than the balance
+
+#q4]⁠Write a program to define a class Student with attributes like name and age, and create objects to represent different students.
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display_info(self):
+        print(f"Student Name: {self.name}, Age: {self.age}")
+
+student1 = Student("Alice", 20)
+student2 = Student("Bob", 22)
+student3 = Student("Charlie", 19)
+
+student1.display_info()
+student2.display_info()
+student3.display_info()
