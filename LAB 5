@@ -1,0 +1,64 @@
+#q1]Write a program to separate the following string into comma (,) separated values. 
+
+
+X= “ India.is.my.country”
+
+X = "India.is.my.country"
+
+result = X.replace(".", ",")
+print(result)
+
+
+#q2] Write a program to sort strings alphabetically in python.
+
+strings = ["banana", "apple", "cherry", "date"]
+
+sorted_strings = sorted(strings)
+
+print(sorted_strings)
+
+#q3] Write a program to remove a given character from a string.
+Y=”M.A.N.I.P.A.L”
+Y = "M.A.N.I.P.A.L"
+char_to_remove = "."
+modified_string = Y.replace(char_to_remove, "")
+print(modified_string)
+
+#q4] Write a program to take an input from a user as a string then, reverse it.
+user_input = input("Enter a string: ")
+
+reversed_string = user_input[::-1]
+
+print("Reversed string:", reversed_string)
+
+#q5] Write a program to check if a string contains only digits.
+user_input = input("Enter a string: ")
+if user_input.isdigit():
+    print("The string contains only digits.")
+else:
+    print("The string does not contain only digits.")
+
+#q6] Write a program to find the number of vowels in the string.
+user_input = input("Enter a string: ")
+
+vowels = "aeiouAEIOU"
+
+vowel_count = 0
+
+for char in user_input:
+    if char in vowels:
+        vowel_count += 1
+
+print(f"Number of vowels in the string: {vowel_count}")
+
+#q7] Write a program to check if every word in a string begins with a capital letters or not.
+user_input = input("Enter a string: ")
+
+words = user_input.split()
+
+all_capital = all(word[0].isupper() for word in words)
+
+if all_capital:
+    print("Every word in the string begins with a capital letter.")
+else:
+    print("Not every word in the string begins with a capital letter.")
