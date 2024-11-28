@@ -1,0 +1,57 @@
+#q1] wap to check if a given number is a disaium number
+def is_disarium_number(n):
+    # Convert the number to a string to easily access digits
+    num_str = str(n)
+    length = len(num_str)
+    
+    sum_of_powers = sum(int(digit) ** (index + 1) for index, digit in enumerate(num_str))
+    
+    return sum_of_powers == n
+
+num = int(input("Enter a number to check if it's a Disarium number: "))
+
+if is_disarium_number(num):
+    print(f"{num} is a Disarium number.")
+else:
+    print(f"{num} is not a Disarium number.")
+
+#q2] check if a number is a harshad number
+
+def is_harshad_number(n):
+    # Calculate the sum of digits of the number
+    sum_of_digits = sum(int(digit) for digit in str(n))
+    
+    return n % sum_of_digits == 0
+
+num = int(input("Enter a number to check if it's a Harshad number: "))
+
+if is_harshad_number(num):
+    print(f"{num} is a Harshad number.")
+else:
+    print(f"{num} is not a Harshad number.")
+
+#q3] wap to compute value of x^n
+def power(x, n):
+    return x ** n
+
+x = float(input("Enter the base number (x): "))
+n = int(input("Enter the exponent (n): "))
+
+result = power(x, n)
+print(f"The value of {x}^{n} is {result}.")
+
+#q4]# Function to compute the sum of digits of a number
+def sum_of_digits(n):
+    # Initialize the sum to 0
+    total_sum = 0
+    
+    while n > 0:
+        total_sum += n % 10  # Add the last digit to the sum
+        n = n // 10  # Remove the last digit by integer division
+    
+    return total_sum
+
+num = int(input("Enter a number to compute the sum of its digits: "))
+
+result = sum_of_digits(num)
+print(f"The sum of digits in {num} is {result}.")
